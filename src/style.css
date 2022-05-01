@@ -1,11 +1,21 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70px 1fr;
 }
-
+#content{
+    grid-row: 2/3;
+    grid-column: 1/4;
+}
+.tab{
+    grid-row: 1/2;
+}
 .backgroundImage {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     background-image: url(croissant.jpg);
     background-size: cover;
