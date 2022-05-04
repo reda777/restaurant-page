@@ -7,10 +7,16 @@ function homePage() {
     headline.classList.add("headline");
     headline.textContent = "The Great Restaurant";
     
-   //about--2nd child
-    const about = document.createElement("div");
-    about.classList.add("about");
-    about.textContent = `*********** is the story of the ***** family, and it is based on love and collaboration within the family.
+    //about--title
+    const aboutTitle = document.createElement("div");
+    aboutTitle.classList.add("aboutTitle");
+    aboutTitle.textContent="About us";
+
+
+    //about--text
+    const aboutText = document.createElement("div");
+    aboutText.classList.add("aboutText");
+    aboutText.textContent = `*********** is the story of the ***** family, and it is based on love and collaboration within the family.
     The restaurant is a gourmet's dream come true.
     Its origins may be traced back to the year ****, when ******** ***** returned to ******* after 5 years abroad and obtained great knowledge.
     *** Restaurant was the first ******* restaurant to be named to the World's 50 Best Restaurants, thanks to its chef ***********. `;
@@ -20,7 +26,8 @@ function homePage() {
     backgroundImage.classList.add("backgroundImage");
 
     home.appendChild(headline);
-    home.appendChild(about);
+    home.appendChild(aboutTitle);
+    home.appendChild(aboutText);
     home.appendChild(backgroundImage);
   
     return home;
