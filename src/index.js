@@ -17,20 +17,20 @@ const mainPage = (() => {
     const tabDiv = document.createElement("div");
     tabDiv.setAttribute("id", "tab");
 
-    //home tab
-    const homeTab = document.createElement("div");
-    homeTab.classList.add("tab");
-    homeTab.textContent = "Home";
+        //home tab
+        const homeTab = document.createElement("div");
+        homeTab.classList.add("tab");
+        homeTab.textContent = "Home";
 
-    //menu tab
-    const menuTab = document.createElement("div");
-    menuTab.classList.add("tab");
-    menuTab.textContent = "Menu";
+        //menu tab
+        const menuTab = document.createElement("div");
+        menuTab.classList.add("tab");
+        menuTab.textContent = "Menu";
 
-    //contact tab
-    const contactTab = document.createElement("div");
-    contactTab.classList.add("tab");
-    contactTab.textContent = "Contact";
+        //contact tab
+        const contactTab = document.createElement("div");
+        contactTab.classList.add("tab");
+        contactTab.textContent = "Contact";
     
     document.body.appendChild(contentDiv);
         contentDiv.appendChild(tabDiv);

@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index:'./src/index.js',
+    index: './src/index.js',
   },
   devtool: 'inline-source-map',
   plugins: [
@@ -27,13 +27,20 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
 
-     {
+      {
 
-       test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
 
-       type: 'asset/resource',
+        type: 'asset/resource',
 
-     },
+      },
+      {
+
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+
+        type: 'asset/resource',
+
+      },
     ],
   },
 };
