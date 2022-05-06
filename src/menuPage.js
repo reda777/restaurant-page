@@ -2,27 +2,47 @@ function homePage() {
     //home div--parent
     const home = document.createElement("div");
     home.classList.add("home");
-    //headline--1st child
+
+    //headline
     const headline = document.createElement("div");
     headline.classList.add("headline");
     headline.textContent = "Menu";
-    
-   //about--2nd child
-    const about = document.createElement("div");
-    about.classList.add("about");
-    about.textContent = `*********** is the story of the ***** family, and it is based on love and collaboration within the family.
-    The restaurant is a gourmet's dream come true.
-    Its origins may be traced back to the year ****, when ******** ***** returned to ******* after 5 years abroad and obtained great knowledge.
-    *** Restaurant was the first ******* restaurant to be named to the World's 50 Best Restaurants, thanks to its chef ***********. `;
-    
+
+    //content div--2nd parent
+    const menuContent = document.createElement("div");
+    menuContent.classList.add("menuContent");
+    //menu--title
+    const menuTitle = document.createElement("div");
+    menuTitle.classList.add("menuTitle");
+    menuTitle.textContent = "The Steuben";
+
+
+    //menu--text
+    const menuText = document.createElement("div");
+    menuText.classList.add("menuText");
+    menuText.textContent = `
+    massaged bison pie    $14\r\n
+    farm-to-table fig extract with hazelnuts    $15\r\n
+    invigorated shell bean, booze & locally-sourced ham frittata    $12\r\n
+    rye pate    $16\r\n
+    sea-salt artichoke bombs, chorizo & lamb    $18\r\n
+    rubbed anchovy surprise    $13\r\n
+    awakened orecchiette with burnt ramp    $17\r\n
+    pepper    $11\r\n
+    crafted fennel reduction & kale salad    $14\r\n
+    quickened marrow    $14\r\n
+    `;
+
     //background--3rd child
-    const backgroundImage=document.createElement("div");
-    backgroundImage.classList.add("backgroundImage");
+    const backgroundImage = document.createElement("div");
+    backgroundImage.classList.add("backgroundImageMenu");
 
     home.appendChild(headline);
-    home.appendChild(about);
+    home.appendChild(menuContent);
+    menuContent.appendChild(menuTitle);
+    menuContent.appendChild(menuText);
     home.appendChild(backgroundImage);
-  
+
     return home;
 }
 export default homePage;

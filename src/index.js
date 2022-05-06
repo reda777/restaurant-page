@@ -17,33 +17,40 @@ const mainPage = (() => {
     const tabDiv = document.createElement("div");
     tabDiv.setAttribute("id", "tab");
 
-        //home tab
-        const homeTab = document.createElement("div");
-        homeTab.classList.add("tab");
-        homeTab.textContent = "Home";
+    //home tab
+    const homeTab = document.createElement("div");
+    homeTab.classList.add("tab");
+    homeTab.textContent = "Home";
 
-        //menu tab
-        const menuTab = document.createElement("div");
-        menuTab.classList.add("tab");
-        menuTab.textContent = "Menu";
+    //menu tab
+    const menuTab = document.createElement("div");
+    menuTab.classList.add("tab");
+    menuTab.textContent = "Menu";
 
-        //contact tab
-        const contactTab = document.createElement("div");
-        contactTab.classList.add("tab");
-        contactTab.textContent = "Contact";
-    
+    //contact tab
+    const contactTab = document.createElement("div");
+    contactTab.classList.add("tab");
+    contactTab.textContent = "Contact";
+
+    //footer
+    const footer = document.createElement("div");
+    footer.setAttribute("id", "footer");
+    footer.textContent = "Copyright © 2022 Reda";
+
     document.body.appendChild(contentDiv);
-        contentDiv.appendChild(tabDiv);
-            tabDiv.appendChild(homeTab);
-            tabDiv.appendChild(menuTab);
-            tabDiv.appendChild(contactTab);
-        contentDiv.appendChild(tabObject.home);
-
+    contentDiv.appendChild(tabDiv);
+    tabDiv.appendChild(homeTab);
+    tabDiv.appendChild(menuTab);
+    tabDiv.appendChild(contactTab);
+    contentDiv.appendChild(tabObject.home);
+    contentDiv.appendChild(footer);
     //navigation listeners
     document.querySelectorAll(".tab").forEach((tab) => {
         tab.addEventListener("click", () => {
-            contentDiv.removeChild(contentDiv.lastChild);
+            contentDiv.removeChild(document.querySelector(".home"));
+            contentDiv.removeChild(document.getElementById("footer"));
             contentDiv.appendChild(tabObject[tab.textContent.toLowerCase()]);
+            contentDiv.appendChild(footer);
         });
     });
 })();

@@ -6,15 +6,15 @@ function homePage() {
     //headline
     const headline = document.createElement("div");
     headline.classList.add("headline");
-    headline.textContent = "La Cane Pastry";
-    
-    //content div--2ndparent
+    headline.textContent = "La Cane Restaurant";
+
+    //content div--2nd parent
     const homeContent = document.createElement("div");
     homeContent.classList.add("homeContent");
     //about--title
     const aboutTitle = document.createElement("div");
     aboutTitle.classList.add("aboutTitle");
-    aboutTitle.textContent="About us";
+    aboutTitle.textContent = "About us";
 
 
     //about--text
@@ -28,17 +28,17 @@ function homePage() {
     //location--title
     const locationTitle = document.createElement("div");
     locationTitle.classList.add("locationTitle");
-    locationTitle.textContent="Location";
-    
+    locationTitle.textContent = "Location";
+
     //location--text
     const locationText = document.createElement("div");
     locationText.classList.add("locationText");
     locationText.textContent = `123 Lake Drive, Lakeville, Amongus`;
-    
+
     //hours--title
     const hoursTitle = document.createElement("div");
     hoursTitle.classList.add("hoursTitle");
-    hoursTitle.textContent="Hours";
+    hoursTitle.textContent = "Hours";
 
 
     //hours--text
@@ -52,9 +52,9 @@ function homePage() {
     Thursday: 6am - 10pm\r\n
     Friday: 6am - 10pm\r\n
     Saturday: 8am - 10pm`;
-    
+
     //background--3rd child
-    const backgroundImage=document.createElement("div");
+    const backgroundImage = document.createElement("div");
     backgroundImage.classList.add("backgroundImage");
 
     home.appendChild(headline);
@@ -66,7 +66,7 @@ function homePage() {
     homeContent.appendChild(locationTitle);
     homeContent.appendChild(locationText);
     home.appendChild(backgroundImage);
-  
+
     return home;
 }
 export default homePage;

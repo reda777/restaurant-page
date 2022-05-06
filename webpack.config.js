@@ -10,7 +10,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
 
-      title: 'The Great Restaurant',
+      title: 'Le Cane Restaurant',
 
     }),
 

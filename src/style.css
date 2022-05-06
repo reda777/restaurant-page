@@ -2,6 +2,7 @@
     font-family: mainFont;
     src: url(fonts/Radio_Canada/RadioCanada-VariableFont_wdth\,wght.ttf);
 }
+
 body {
     font-family: mainFont;
     margin: 0;
@@ -10,15 +11,17 @@ body {
     max-width: 100%;
     min-height: 100vh;
 }
-#content{
-    display:flex;
+
+#content {
+    display: flex;
     flex-direction: column;
     position: relative;
     min-height: inherit;
     height: 100%;
 }
+
 /* header ===============================================*/
-#tab{
+#tab {
     height: 50px;
     width: 100vw;
     position: fixed;
@@ -26,7 +29,8 @@ body {
     display: flex;
     justify-content: center;
 }
-.tab{
+
+.tab {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,45 +39,62 @@ body {
     border-radius: 2px;
     font-weight: 600;
     margin: 5px 5px;
-    background-color: rgba(172, 54, 54, 0);
+    background-color: #e9c793;
     cursor: default;
     color: rgb(0, 0, 0);
     user-select: none;
 }
-.tab:hover{
+
+.tab:hover {
     background-color: #c41616;
     color: white;
     transition: .5s background-color;
 }
-.tab:active{
+
+.tab:active {
     background-color: #500a0a;
 }
+
+/* footer ===================*/
+#footer {
+    height: 100px;
+    background-color: #e9c793;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+    color: #e6951b;
+}
+
 /* home page ===============================================*/
-.home{
+.home {
     display: flex;
     flex-direction: column;
-    padding-top: 100px;
+    padding: 100px 0;
 }
-.homeContent{
+
+.homeContent {
     display: grid;
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: repeat(10, 1fr);
     grid-template-rows: fit-content(50px) fit-content(150px) 1fr;
     row-gap: 20px;
 }
+
 .headline {
     align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     font-weight: 900;
     font-size: 32px;
     border: 4px solid black;
     color: black;
     height: 50px;
     margin-bottom: 50px;
-    width: 300px;
+    width: 11em;
 }
+
 .aboutTitle {
     grid-row: 2/4;
     grid-column: 2/3;
@@ -83,6 +104,7 @@ body {
     padding: 20px;
     font-weight: 100;
 }
+
 .aboutText {
     display: flex;
     align-items: start;
@@ -94,6 +116,7 @@ body {
     font-size: large;
     font-weight: 200;
 }
+
 .locationTitle {
     grid-row: 4/5;
     grid-column: 2/3;
@@ -103,6 +126,7 @@ body {
     padding: 20px;
     font-weight: 100;
 }
+
 .locationText {
     display: flex;
     align-items: start;
@@ -114,6 +138,7 @@ body {
     font-size: large;
     font-weight: 200;
 }
+
 .hoursTitle {
     grid-row: 2/3;
     grid-column: 7/9;
@@ -124,6 +149,7 @@ body {
     font-weight: 100;
     margin-bottom: -20px;
 }
+
 .hoursText {
     display: flex;
     align-items: start;
@@ -136,12 +162,95 @@ body {
     font-weight: 200;
     white-space: pre-line;
 }
+
 .backgroundImage {
     background-image: url(images/croissant.jpg);
     background-size: cover;
     height: 100%;
     width: 100%;
-    z-index: -1;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+}
+
+/* Menu page ====================================================*/
+.menuContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menuTitle {
+    display: flex;
+    justify-content: center;
+    background: #ebd6b6c5;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.267);
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    font-weight: 100;
+    width: 600px;
+}
+
+.menuText {
+    display: flex;
+    align-items: start;
+    background: #ebd6b6c5;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+    font-size: large;
+    font-weight: 200;
+    white-space: pre-line;
+    width: 600px;
+}
+
+.backgroundImageMenu {
+    background-image: url(images/dessert.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+}
+
+/* Contact page ====================================================*/
+.contactContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contactTitle {
+    display: flex;
+    justify-content: center;
+    background: #ebd6b6c5;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.267);
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    font-weight: 100;
+    width: 600px;
+}
+
+.contactText {
+    display: flex;
+    align-items: start;
+    background: #ebd6b6c5;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+    font-size: large;
+    font-weight: 200;
+    white-space: pre-line;
+    width: 600px;
+}
+
+.backgroundImageContact {
+    background-image: url(images/meat.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
     position: absolute;
     top: 0;
 }
